@@ -1,0 +1,3 @@
+#Ignore the bano-data file. Data will be downloaded by the shell
+BANO/bano-data/*
+valeursfoncieres*.txt

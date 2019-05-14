@@ -1,0 +1,30 @@
+{
+  "size": 1,
+  "query": {
+    "bool": {
+      "should": [
+        {
+          "match": {
+            "address.number": "%{[address][number]}"
+          }
+        },
+        {
+          "match": {
+            "address.street_name": {
+              "query": "%{[address][street_name]}",
+              "boost": 2
+            }
+          }
+        },
+        {
+          "match": {
+            "address.city": {
+              "query": "%{[address][city]}",
+              "boost": 4
+            }
+          }
+        }
+      ]
+    }
+  }
+}

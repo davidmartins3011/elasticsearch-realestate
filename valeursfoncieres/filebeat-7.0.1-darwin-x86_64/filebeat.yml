@@ -1,0 +1,7 @@
+filebeat.inputs:
+- type: log
+  paths:
+    - "/Users/David/Desktop/ProjetsPerso/ELK Real Estate/valeursfoncieres/valeursfoncieres-all.txt"
+  close_eof: true
+output.logstash:
+  hosts: ["localhost:5044"]
